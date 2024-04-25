@@ -1,5 +1,4 @@
-pandas==2.2.1
-streamlit==1.32.2
-pydeck==0.8.1b0
-numpy==1.26.4
-streamlit-pandas==0.0.9
+pandas
+streamlit
+numpy
+streamlit-pandas
