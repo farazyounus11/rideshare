@@ -19,7 +19,7 @@ create_data = {"Date": "select",
                 "Hour": "multiselect",
               "Base": "select"}
 
-all_widgets = sp.create_widgets(df, create_data, ignore_columns=[["lat","lon"]])
+all_widgets = sp.create_widgets(df, create_data)
 
 res = sp.filter_df(df, all_widgets)
 st.title("Streamlit AutoPandas")
