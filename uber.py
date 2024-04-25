@@ -28,32 +28,3 @@ st.write(df)
 
 st.header("Result DataFrame")
 st.write(res)
-
-st.pydeck_chart(pdk.Deck(
-    map_style=None,
-    initial_view_state=pdk.ViewState(
-        latitude=40.7128,  # NYC latitude
-        longitude=-74.0060,  # NYC longitude
-        zoom=11,
-        pitch=50,
-    ),
-    layers=[
-        pdk.Layer(
-           'HexagonLayer',
-           data=res,
-           get_position='[lon, lat]',
-           radius=200,
-           elevation_scale=4,
-           elevation_range=[0, 1000],
-           pickable=True,
-           extruded=True,
-        ),
-        pdk.Layer(
-            'ScatterplotLayer',
-            data=res,
-            get_position='[lon, lat]',
-            get_color='[200, 30, 0, 160]',
-            get_radius=200,
-        ),
-    ],
-))
